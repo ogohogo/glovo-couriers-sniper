@@ -10,7 +10,7 @@ const webhook = require("./modules/discord/webhook");
 
 const fs = require("fs").promises;
 
-const { GLOVO, DISCORD, DEBUG } = require("./config.js.example");
+const { GLOVO, DISCORD, DEBUG } = require("./config");
 
 async function initLogin() {
     const data = await login();

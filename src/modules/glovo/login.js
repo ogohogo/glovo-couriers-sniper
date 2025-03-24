@@ -1,5 +1,5 @@
 const axios = require('axios');
-const { GLOVO, PROXY } = require('../../config.js.example');
+const { GLOVO, PROXY } = require('../../config');
 
 module.exports = async () => {
     try {

@@ -1,4 +1,4 @@
-const { GLOVO, PROXY } = require('../../../config.js.example');
+const { GLOVO, PROXY } = require('../../../config');
 const { HttpsProxyAgent } = require('https-proxy-agent');
 const axios = require('axios');
 const fs = require('fs').promises;

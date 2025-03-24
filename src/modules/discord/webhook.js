@@ -1,4 +1,4 @@
-const { DISCORD } = require("../../config.js.example");
+const { DISCORD } = require("../../config");
 
 module.exports = async (message) => {
     try {
