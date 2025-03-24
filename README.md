@@ -1,24 +1,19 @@
-# glovo-couriers-sniper
-Skrypt który automatycznie skanuje i rezerwuje sloty w aplikacji Glovo Couriers
+# glovo-rider-sniper
+Script that automatically scans and reserves shifts and swaps in Glovo Rider app.
 
-## Czemu?
-Często i gęsto, szczególnie w mniejszych miastach, występuje problem z dostępnością slotów.
+## Why?
+Quite often, especially in smaller cities there's an issue with shift availability. This script attempts to combat that.
 
-Zazwyczaj jest tak, że po 3-4 kurierów jeżdzących non-stop, bierze wszystko i nie zostawia nic dla reszty.
+## How to use it?
+- Fork this repo
+- Rename `.env.example` to `.env` and fill out your credentials
+- Go to src folder and rename `config.js.example` to `config.js` and configure it as you want.
+- Install dependencies with `npm install` command
+- Configure script as you want in `./src/config.js` file.
+- Run the script with `npm start` command.
+- Profit
 
-Skrypt powstał z myślą o zwalczaniu tego.
-
-## Jak tego używać?
-Używając np. mitmproxy wyciągasz swój refresh token, wklejasz do config.js w odpowiedniej rubryce, reszte konfigurujesz pod siebie, odpalasz skrypt, i... czekasz...
-
-## Ważne
-Używając skryptu przez 6 miesięcy, z częstotliwością odświeżania co 5 sekund, nigdy nie dostałem bana...
-
-...ALE ZAWSZE MOŻESZ BYĆ PIERWSZY!
-
-Używaj skryptu z głową, nie odpowiadam za to jak dostaniesz bana (chociaż ban na w tej aplikacji to bardziej nagroda niż kara XD)
-
-Nie odpowiadam za wszelkie szkody wykonane w stronę Glovo.
-
-Skrypt powstał w celach edukacyjnych.
-
+## Important Notice
+While this script attempts to mimic human behaviour as best as it can, there's still a posibility to get banned.
+I'm not responsible for any bans / damage caused to Glovo / Delivery Hero by using this script.
+This script has been created for educational purposes only.

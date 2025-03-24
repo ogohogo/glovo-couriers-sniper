@@ -1,0 +1,72 @@
+module.exports = {
+    //Debug mode
+    //If you want to see more information in the console, you can enable this.
+    //It's best to keep this as false, unless you're having issues with the script.
+    DEBUG: false,
+
+    GLOVO: {
+        //Login credentials
+        //You can either set these here or use environment variables.
+        //If you want to use environment variables, you can set them in a .env file in the root directory of the project.
+        EMAIL: process.env.email,
+        PASSWORD: process.env.password,
+
+        //API URL
+        //You can change this to your own API URL if you want, but it's best to keep it as it is.
+        //Unless you're from a different country than Poland, then you should change it to your country's API URL.
+        BASE_API_URL: `https://gv-pl.usehurrier.com/api`,
+
+        //Dates to check for shifts and swaps
+        //These dates have to be in the format "YYYY-MM-DD".
+        //TODO: Add a way to automatically get the next 7 days.
+        DATES: [
+            "2025-03-28",
+            "2025-03-30",
+        ],
+
+        //Accepted hours for shifts and swaps
+        //Example: if you provide the number "18" in the array for Sunday, it will only accept shifts and swaps that start at 18:00.
+        //If you want to accept shifts and swaps on multiple hours, you can provide multiple numbers in the array.
+        //Example: if you provide the numbers "18,19" in the array for Sunday, it will only accept shifts and swaps that start at 18:00 or 19:00.
+        "ACCEPTED_HOURS": [
+            //Sunday
+            [],
+            //Monday
+            [],
+            //Tuesday
+            [],
+            //Wednesday
+            [],
+            //Thursday
+            [],
+            //Friday
+            [],
+            //Saturday
+            []
+        ]
+    },
+
+    //Discord settings
+    //If you want to get notifications on Discord, you can enable this.
+    DISCORD: {
+        ENABLED: false,
+        WEBHOOK_URL: ""
+    },
+    
+    //Proxy settings
+    //Make sure to only use residential proxies, as datacenter proxies are banned.
+    //If you don't have a proxy, you can disable it by setting ENABLED to false.
+    PROXY: {
+        ENABLED: false,
+        URL: "" //Can be either http://username:password@ip:port or just http://ip:port
+    },
+
+    //Default headers for Glovo API requests
+    //You can change this to your own headers if you want, but it's best to keep it as it is.
+    DEFAULT_HEADERS: {
+        "content-type": "application/json",
+        "accept": "application/json, text/plain, */*",
+        "accept-language": "pl-PL,pl;q=0.5",
+        "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148" //Glovo uses Android Webview or iOS WKWebView, so we can use generic user-agent. Altough I think the better solution would be to use android's user-agent if you are using android device and iOS user-agent if you are using iOS device.
+    },
+}
